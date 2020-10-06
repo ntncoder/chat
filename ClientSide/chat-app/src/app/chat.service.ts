@@ -4,7 +4,7 @@ import {Observable,Observer} from 'rxjs';
 @Injectable()
 export class ChatService{
 
-    private socket = io.connect('http://localhost:4000');
+    private socket = io.connect('http://52.187.23.106:4000');
 
     joinRoom(data){
 

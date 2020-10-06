@@ -13,7 +13,7 @@ var app = express();
 //database connection setup
 const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/ChatApplication", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb://52.187.23.106:27017/ChatApplication", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB!!'))
   .catch((err) => console.log(err));
 
@@ -31,7 +31,7 @@ app.use(morgan('combined', { stream: accessLogStream }))
 
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+  res.setHeader("Access-Control-Allow-Origin", "http://52.187.23.106:4200");
   res.setHeader('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   next();
